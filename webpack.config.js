@@ -14,13 +14,21 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
       options: {
-        presets: ['env']
+        presets: ['env'],
       }
     }, {
-      enforce: 'pre',
       test: /\.vue$/,
-      exclude: /node_modules/,
       loader: 'vue-loader',
-    }],
+      options: {
+        loaders: {
+          scss: 'vue-style-loader!css-loader!sass-loader',
+        }
+      }
+    }]
   },
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js',
+    }
+  }
 };
