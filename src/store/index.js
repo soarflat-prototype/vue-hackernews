@@ -86,3 +86,5 @@ store.fetchUser = id => {
     }, reject);
   });
 };
+
+export default store;
