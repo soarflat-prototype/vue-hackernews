@@ -26,7 +26,7 @@ api.child('topstories').on('value', snapshot => {
   store.emit('topstories-updated')
 });
 
-/**gst
+/**
  * 指定したidのitemデータをフェッチする
  *
  * @param {Number} id

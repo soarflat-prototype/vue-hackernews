@@ -7,10 +7,14 @@
       <h1><a href="#/">Hacker News</a></h1>
       <span class="source">
         Built with <a href="http://vuejs.org" target="_blank">Vue.js</a> |
-        <a href="https://github.com/vuejs/vue-hackernews" target="_blank">Source</a>
+        <a href="https://github.com/soarflat-prototype/vue-hackernews" target="_blank">Source</a>
       </span>
     </div>
-    <!--<router-view class="view" keep-alive transition transition-mode="out-in"></router-view>-->
+    <transition>
+      <keep-alive>
+        <router-view class="view"></router-view>
+      </keep-alive>
+    </transition>
   </div>
 </template>
 
