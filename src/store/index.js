@@ -1,7 +1,7 @@
 import Firebase from 'firebase/app';
 import Database from 'firebase/database';
 import { EventEmitter } from 'events';
-import Promise from 'bluebird';
+import { Promise } from 'es6-promise';
 
 const config = {
   databaseURL: 'https://hacker-news.firebaseio.com'
