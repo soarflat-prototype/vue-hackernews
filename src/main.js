@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import { domain, fromNow } from './filters';
 import App from './components/App.vue';
 import NewsView from './components/NewsView.vue';
+import ItemView from './components/ItemView.vue';
 
 // プラグインをインストール
 Vue.use(Router);
@@ -15,6 +16,9 @@ const router = new Router({
   routes: [{
     path: '/news/:page',
     component: NewsView,
+  }, {
+    path: '/item/:id',
+    component: ItemView,
   }, {
     path: '*',
     redirect: '/news/1',
