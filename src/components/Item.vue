@@ -1,4 +1,5 @@
 <template>
+
   <div class="item">
     <span class="index">{{ index }}</span>
     <p>
@@ -8,11 +9,11 @@
     <p class="subtext">
       <span v-show="showInfo">
         {{ item.score }} points by
-        <a :href="'#/user' + item.by">{{ item.by }}</a>
+        <router-link :to="'/user/' + item.by">{{ item.by }}</router-link>
       </span>
       {{ item.time | fromNow }} ago
       <span class="comments-link" v-show="showInfo">
-        | <a :href="'#/item/' + item.id">{{item.descendants}} comments</a>
+        | <router-link :to="'/item/' + item.id">{{item.descendants}} comments</router-link>
       </span>
     </p>
   </div>
