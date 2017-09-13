@@ -4,6 +4,7 @@ import { domain, fromNow } from './filters';
 import App from './components/App.vue';
 import NewsView from './components/NewsView.vue';
 import ItemView from './components/ItemView.vue';
+import UserView from './components/UserView.vue';
 
 // プラグインをインストール
 Vue.use(Router);
@@ -19,6 +20,9 @@ const router = new Router({
   }, {
     path: '/item/:id',
     component: ItemView,
+  }, {
+    path: '/user/:id',
+    component: UserView,
   }, {
     path: '*',
     redirect: '/news/1',
