@@ -78,7 +78,7 @@
     width 100%
     transition opacity .2s ease
     box-sizing border-box
-    padding 8px 20px
+    padding 10px 20px
     &.v-enter, &.v-leave
       opacity 0
 

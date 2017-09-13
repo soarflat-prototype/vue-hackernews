@@ -47,13 +47,18 @@
 <style lang="stylus">
   @import "../variables.styl"
   .item
-    padding 2px 0 2px 40px
+    margin-top 20px
+    padding 1px 0 2px 40px
     position relative
     transition background-color .2s ease
     p
       margin 2px 0
-    .title:visited
-      color $gray
+    .title
+      font-size 16px
+      &:hover
+        text-decoration underline
+      &:visited
+        color $gray
     .index
       color $gray
       position absolute
