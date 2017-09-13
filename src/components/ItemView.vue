@@ -37,10 +37,19 @@
     },
 
     watch: {
-      '$route'(to) {
-        store.fetchItem(to.params.id).then(item => {
+      '$route.params.id': 'fetchItem',
+    },
+
+    beforeMount() {
+      this.fetchItem();
+    },
+
+    methods: {
+      fetchItem() {
+        store.fetchItem(this.$route.params.id).then(item => {
           document.title = item.title + ' | Vue.js HN Clone';
           this.item = item;
+
           store.fetchItems(item.kids).then(comments => {
             this.comments = comments;
           })
