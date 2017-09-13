@@ -43,7 +43,7 @@
 
     methods: {
       update() {
-        this.page = this.$route.params.page;
+        this.page = parseInt(this.$route.params.page);
         store.fetchItemsByPage(this.page).then(items => {
           this.items = items
         });
