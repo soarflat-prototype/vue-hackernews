@@ -3,13 +3,13 @@
     <item :item="item"></item>
     <p class="itemtext" v-if="hasText" v-html="item.text"></p>
     <ul class="poll-options" v-if="pollOptions">
-      <li v-for="option in pollOptions">
+      <li v-for="option in pollOptions" :key="option.id">
         <p>{{ option.text }}</p>
         <p class="subtext">{{ option.text }} points</p>
       </li>
     </ul>
     <ul class="comments" v-if="comments">
-      <comment v-for="comment in comments" :comment="comment"></comment>
+      <comment v-for="comment in comments" :comment="comment" :key="comment.id"></comment>
     </ul>
     <p v-show="!comments.length && !isJob">No comments yet.</p>
   </div>

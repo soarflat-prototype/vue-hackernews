@@ -9,7 +9,7 @@
       {{ comment.text }}
     </p>
     <div class="child-comments" v-if="comment.kids" v-show="open">
-      <comment v-for="comment in childComments" :comment="comment"></comment>
+      <comment v-for="comment in childComments" :comment="comment" :key="comment.id"></comment>
     </div>
   </li>
 </template>
