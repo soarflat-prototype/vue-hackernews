@@ -46,12 +46,9 @@
         store.fetchItemsByPage(this.page).then(items => {
           this.items = items
         });
-      }
-    },
-
-    watch: {
-      '$route'(to) {
-        const page = to.params.page;
+      },
+      fetchItemsByPage() {
+        const page = this.$route.params.page;
 
         document.title = 'Vue.js HN Clone';
         store.fetchItemsByPage(page).then(items => {
@@ -59,6 +56,10 @@
           this.page = parseInt(page);
         });
       }
+    },
+
+    watch: {
+      '$route.params.page': 'fetchItemsByPage',
     },
 
     filters: {
